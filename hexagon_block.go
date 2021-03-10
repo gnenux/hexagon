@@ -50,7 +50,7 @@ func (b Block) Draw(ctx *gg.Context) {
 	ctx.DrawStringAnchored(fmt.Sprintf("(%d,%d,%d)", b.X, b.Y, b.Z), centerX+float64(ctx.Width())/2, centerY+float64(ctx.Height())/2, 0.5, 0.5)
 }
 
-// GetLocation 转成笛卡尔坐标系
+// GetLocation 转成笛卡尔直角坐标系
 func (b Block) GetLocation() (float64, float64) {
 	y := b.Lenth * 3 / 2 * float64(b.Z)
 	x := float64(b.Y-b.X) * b.Lenth * math.Sqrt(3) / 2

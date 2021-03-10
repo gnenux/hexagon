@@ -51,10 +51,8 @@ func (hm HexagonMap) AllBlocks() []*Block {
 	return bs
 }
 
-// GetNeighborBlock 获取(x, y, z)的距离小于等于distance的邻居block
+// GetNeighborBlock 获取(x, y, z)的距离小于等于distance的邻居block，excludeSelf表示是否排除中心block
 func (hm HexagonMap) GetNeighborBlocks(x, y, z, distance int, excludeSelf bool) []*Block {
-	// 先确定有没有，再append进去
-	// distance为0，则只有目标位置的block
 	bs := make([]*Block, 0, 0)
 	for i := -distance; i <= distance; i++ { //x轴
 		for j := -distance; j <= distance; j++ { //y轴
