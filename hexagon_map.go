@@ -10,7 +10,7 @@ type HexagonMap struct {
 	blocks  map[string]*Block
 }
 
-func GenHexagonMap(mapSize int, sideLength float64) *HexagonMap {
+func NewHexagonMap(mapSize int, sideLength float64) *HexagonMap {
 
 	blocks := make(map[string]*Block, 0)
 

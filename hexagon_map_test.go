@@ -10,7 +10,7 @@ import (
 func TestHexagonMap(t *testing.T) {
 	mapSize := 5
 	l := float64(100)
-	hm := GenHexagonMap(mapSize, l)
+	hm := NewHexagonMap(mapSize, l)
 
 	dc := gg.NewContext(2000, 2000)
 	for _, block := range hm.AllBlocks() {
