@@ -22,7 +22,7 @@ func (b Block) Draw(ctx *gg.Context) {
 	locs := make([][]float64, 0, 0)
 
 	// block之间的缝隙
-	b.Lenth = b.Lenth - 5
+	b.Lenth = b.Lenth - 2
 	locA := []float64{centerX, centerY + b.Lenth}
 	locB := []float64{centerX + b.Lenth*math.Sqrt(3)/2, centerY + b.Lenth/2}
 	locs = append(locs, locB)

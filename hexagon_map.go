@@ -5,6 +5,22 @@ import (
 	"image/color"
 )
 
+var (
+	Wall = color.RGBA{
+		R: 116,
+		G: 105,
+		B: 101,
+		A: 255,
+	}
+
+	Road = color.RGBA{
+		R: 243,
+		G: 179,
+		B: 14,
+		A: 255,
+	}
+)
+
 type HexagonMap struct {
 	mapSize int
 	blocks  map[string]*Block

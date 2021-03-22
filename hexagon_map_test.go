@@ -8,11 +8,11 @@ import (
 )
 
 func TestHexagonMap(t *testing.T) {
-	mapSize := 5
-	l := float64(100)
+	mapSize := 4
+	l := float64(48)
 	hm := NewHexagonMap(mapSize, l)
 
-	dc := gg.NewContext(2000, 2000)
+	dc := gg.NewContext(1024, 1024)
 	for _, block := range hm.AllBlocks() {
 		block.Draw(dc)
 	}
